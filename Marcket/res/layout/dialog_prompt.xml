@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="544dp"
+    android:layout_height="265dp"
+    android:background="#3e4044" >
+
+    <TextView
+        android:id="@+id/id_dialog_prompt_message"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lineSpacingExtra="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_28"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/id_dialog_prompt_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_button_selector"
+            android:gravity="center"
+            android:text="@string/dialog_button_sure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_32" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/id_dialog_prompt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_button_selector"
+            android:gravity="center"
+            android:text="@string/dialog_button_cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_32" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="210dp"
+    android:layout_centerInParent="true"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingTop="15dp" >
+
+    <ImageView
+        android:id="@+id/id_app_icon"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_default" />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="190dp"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/id_app_icon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/id_app_anme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_highlight_color"
+            android:textSize="@dimen/font_32" />
+
+        <TextView
+            android:id="@+id/id_app_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:singleLine="false"
+            android:text=""
+            android:textColor="@color/text_des_color"
+            android:textSize="@dimen/font_26"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/id_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/font_24" />
+
+            <TextView
+                android:id="@+id/id_app_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/font_24"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_app_download_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/font_24"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_app_operate"
+        android:layout_width="149dp"
+        android:layout_height="67dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/button_download_selector"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_28"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/id_app_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/id_app_download_cancel"
+            android:layout_width="@dimen/circle_height"
+            android:layout_height="@dimen/circle_height"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/app_download_cancel"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <Button
+            android:id="@+id/id_app_download_start"
+            android:layout_width="@dimen/circle_height"
+            android:layout_height="@dimen/circle_height"
+            android:layout_alignBottom="@+id/id_app_download_cancel"
+            android:layout_alignTop="@+id/id_app_download_cancel"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/id_app_download_cancel"
+            android:background="@drawable/app_download_start"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="visible" />
+
+        <cld.kmarcket.customview.RoundProgressBar
+            android:id="@+id/id_app_download_progressbar"
+            android:layout_width="@dimen/circle_height"
+            android:layout_height="@dimen/circle_height"
+            android:layout_alignBottom="@+id/id_app_download_start"
+            android:layout_alignLeft="@+id/id_app_download_start"
+            android:layout_alignRight="@+id/id_app_download_start"
+            android:layout_alignTop="@+id/id_app_download_start"
+            app:max="100"
+            app:progress="0"
+            app:roundColor="@color/transparent"
+            app:roundProgressColor="@color/main_color"
+            app:roundWidth="6dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

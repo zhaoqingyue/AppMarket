@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 主颜色 -->
+    <color name="main_color">#31b31f</color>
+    <!-- dialog正常颜色 -->
+    <color name="dialog_normal_color">#636770</color>
+    <!-- 文字高亮显示 -->
+    <color name="text_highlight_color">#ffffff</color>
+    <!-- 文字描述显示 -->
+    <color name="text_des_color">#ababab</color>
+    <!-- 文字正常显示 -->
+    <color name="text_normal_color">#7a7a7a</color>
+    
+    <color name="button_download_normal_color">#31b31f</color>
+    <color name="button_download_pressed_color">#1f8511</color>
+    
+</resources>

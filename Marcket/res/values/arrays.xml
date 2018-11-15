@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 内置应用包名 -->
+    <string-array name="internal_package">
+　　             <item>com.cld.navi.cc</item>          <!-- 凯立德导航 -->
+　　             <item>cld.fm</item>                   <!-- 在线FM -->
+　　             <item>cld.kmarcket</item>             <!-- K应用 -->
+　　             <item>cld.voice.robot</item>          <!-- 语音助手 -->
+　　             <item>cld.kcloud.center</item>        <!-- K云 -->
+       <item>cld.navi.position.frame</item>  <!-- 小凯互联 -->
+       <item>com.cld.launcher</item>         <!-- launcher -->
+       <item>cld.music.cldmusicwidget</item> <!-- 天气widget-->
+       <item>cn.kuwo.kwmusiccar</item>       <!-- 酷我音乐 -->
+       <item>cld.weather</item>              <!-- 天气-->
+　　    </string-array>
+
+    <!-- 内置应用简介 -->
+    <string-array name="package_des">
+       <item>凯立德全新在线导航</item>                   <!-- 凯立德导航 -->
+       <item>中国知名声音库，数千万条优质声音，听你想听！</item>  <!-- 在线FM -->
+       <item>凯立德车联网应用在线升级平台</item>            <!-- K应用 -->
+       <item>一切问题语音解决，解放双手，驾驶更安全！</item>    <!-- 语音助手 -->
+       <item>凯立德车联网云服务中心</item>                <!-- K云 -->
+       <item>随时随地查询爱车位置与行驶轨迹</item>           <!-- 小凯互联 -->
+       <item>launcher</item>                       <!-- launcher -->
+　　             <item>cldmusicwidget</item>                 <!-- 天气widget-->
+　　             <item>海量在线乐库，一路畅听好心情！</item>           <!-- 酷我音乐 -->
+　　             <item>天气</item>                             <!-- 天气-->
+　　    </string-array>
+
+    <!-- 内置应用属性(0: 普通apk; 1：widget插件) -->
+    <integer-array name="package_widget">
+       <item>0</item>
+       <item>0</item>
+       <item>0</item>
+       <item>0</item>
+       <item>0</item>
+       <item>0</item>
+       <item>0</item>
+　　             <item>1</item>
+　　             <item>0</item>
+　　             <item>0</item>
+　　    </integer-array>
+    
+</resources>

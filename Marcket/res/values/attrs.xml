@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabWidget">
+        <attr name="tab_src" format="reference" /> <!-- 参考某一资源ID -->
+        <attr name="tab_color" format="color" />   <!-- 颜色值 -->
+        <attr name="tab_text" format="string" />   <!-- 字符串 -->
+    </declare-styleable>
+    
+    <declare-styleable name="RoundProgressBar">  
+        <attr name="roundColor" format="color"/>           <!-- 颜色值 -->
+        <attr name="roundProgressColor" format="color"/>   <!-- 颜色值 -->
+        <attr name="roundWidth" format="dimension"></attr> <!-- 尺寸值 -->
+        <attr name="max" format="integer"></attr>          <!-- 整型值 -->
+        <attr name="progress" format="integer"></attr>     <!-- 整型值 -->
+        <attr name="textColor" format="color" />           <!-- 颜色值 -->
+        <attr name="textSize" format="dimension" />        <!-- 尺寸值 -->
+    </declare-styleable> 
+</resources>

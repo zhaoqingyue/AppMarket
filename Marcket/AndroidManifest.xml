@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cld.kmarcket"
+    
+    android:versionCode="11"
+    android:versionName="2.1.1" >
+    
+    <!-- android:sharedUserId="android.uid.system" -->
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    
+    <!-- 允许程序挂载和反挂载文件系统可移动存储 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许程序读取所有者数据的权限 -->
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <!-- 允许程序写入但不读取所有者数据 -->
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <!-- 允许程序在内置存储中写文件(4.0之后的storage下挂载的卡，4.0之前的mnt下挂载的卡) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序在外置存储中写文件(4.0之后的mnt下挂载的卡，4.0之前不需要这个权限) -->
+    <!-- 允许程序访问GPS位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许程序读取设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许程序访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 允许程序访问有关GSM网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序改变Z轴排列任务 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <!-- 允许程序读取底层系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 允许程序重新启动其他程序 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- SDK 2.3 需要 android.permission.WRITE_SETTINGS 权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <!-- 全屏时，导航栏不响应权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	<uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+	<uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <!-- 关机权限 -->
+    <uses-permission android:name="android.permission.SHUTDOWN" />
+    
+    <permission
+        android:name="cld.kmarcket.READ_VALID_PACKAGES"
+        android:label="cld.kmarcket.permission"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="cld.kmarcket.WRITE_VALID_PACKAGES"
+        android:label="cld.kmarcket.permission"
+        android:protectionLevel="normal" />
+
+    <application
+        android:name="cld.kmarcket.KMarcketApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        
+        <activity
+            android:name="cld.kmarcket.MainActivity"
+            android:configChanges="keyboardHidden|orientation|mcc|mnc|locale|layoutDirection|touchscreen|keyboard|navigation|screenLayout|fontScale|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="cld.kmarcket.receiver.BootReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver 
+            android:name="cld.kmarcket.receiver.NetReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver
+            android:name="cld.kmarcket.receiver.PackageReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver
+            android:name="cld.kmarcket.receiver.InstallerReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.cldpackageinstaller.InstallerInter.INSTALL_START" />
+                <action android:name="com.cldpackageinstaller.InstallerInter.INSTALL_PROGRESS" />
+                <action android:name="com.cldpackageinstaller.InstallerInter.INSTALL_COMPLETE" />
+                <action android:name="com.cldpackageinstaller.InstallerInter.DELETE_START" />
+                <action android:name="com.cldpackageinstaller.InstallerInter.DELETE_PROGRESS" />
+                <action android:name="com.cldpackageinstaller.InstallerInter.DELETE_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="cld.kmarcket.packages.PackageProvider"
+            android:authorities="cld.kmarcket.providers.packages_provider"
+            android:exported="true"
+            android:readPermission="cld.kmarcket.READ_VALID_PACKAGES"
+            android:writePermission="cld.kmarcket.WRITE_VALID_PACKAGES" />
+
+        <service
+            android:name="cld.kmarcket.service.CheckNewService"
+            android:exported="false" />
+        
+        <!-- cld.kmarcket.util.LocationUtils.startLocation需要改权限 -->
+        <!-- 渠道，建议：客户+版本号+地图版本号 -->
+        <meta-data
+            android:name="Channel"
+            android:value="OEM服务" >
+        </meta-data>
+        
+        <!-- java代码 + c代码svn版本号 -->
+        <meta-data
+            android:name="Revision"
+            android:value="Sev18" />
+    </application>
+
+</manifest>
