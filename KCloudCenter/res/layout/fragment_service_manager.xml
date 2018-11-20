@@ -1,0 +1,44 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_right_bg" >
+    
+    <include
+        android:id="@+id/service_layout_getting_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/view_fragment_getting"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/service_layout_success_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/service_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/service_content_layout_bottom_margin"
+            android:layout_marginLeft="@dimen/service_content_layout_margin"
+            android:layout_marginRight="@dimen/service_content_layout_margin"
+            android:layout_marginTop="@dimen/service_content_layout_margin" />
+
+        <cld.kcloud.utils.control.CldCircleIndicator
+            android:id="@+id/service_pager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom|center_horizontal"
+            app:ci_drawable="@drawable/white_radius"
+            app:ci_margin="10dp" />
+    </FrameLayout>
+    
+    <include
+        android:id="@+id/service_layout_failed_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_fragment_load_failed"
+        android:visibility="gone" />
+
+</FrameLayout>

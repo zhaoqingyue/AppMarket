@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">K云</string>
+    <string name="tab_personal">个人信息  </string>
+    <string name="tab_carinfo">爱车信息   </string>
+    <string name="tab_service">服务内容   </string>
+    <string name="tab_netdata">流量统计  </string>
+    
+	<string name="login_text_pass"><u>跳 过</u></string>
+	<string name="login_text_back">返回</string>
+	<string name="login_text_mobile">手机登录</string>
+	<string name="login_text_account">凯立德帐号登录</string>
+	<string name="login_text_mobile_u"><u>手机登录</u></string>
+	<string name="login_text_account_u"><u>凯立德帐号登录</u></string>
+	<string name="login_text_get_vericode">获取验证码</string>
+	<string name="login_text_mobile_hint">请输入11位手机号码</string>
+	<string name="login_text_account_hint">请输入手机号/邮箱/用户名</string>
+	<string name="login_text_vericode_hint">输入验证码</string>
+	<string name="login_text_password_hint">请输入密码</string>
+	<string name="login_text_lostpwd">忘记密码</string>
+	<string name="login_text_modifypwd">修改密码</string>
+	<string name="login_text_set_new_password">设置新密码</string>
+	<string name="login_text_new_password_hint">请输入新密码</string>
+	<string name="login_text_new_password_again_hint">请再次确认新密码</string>
+	<string name="login_text_new_password_tip">新密码至少6个字符，其中包含1个数字和一个字母。</string>
+	<string name="login_text_login">登 录</string>
+	<string name="login_text_scan_title">扫码登录</string>
+	<!-- <string name="login_text_scan">使用<font color="green">微信</font>或<font color="green">凯立德导航</font>手机APP扫一扫</string> -->
+	<string name="login_text_scan">使用&lt;font color=\"#31b31f\"&gt;微信&lt;/font&gt;或&lt;font color=\"#31b31f\"&gt;凯立德导航&lt;/font&gt;手机APP扫一扫</string>  
+	<string name="login_text_scan_2">注册登录，体验更多服务</string>
+	<string name="vericode_has_send">已发送验证码</string>
+	<string name="vericode_resend">重新发送</string>
+	<string name="login_text_success">恭喜！登录成功。</string>
+	<string name="login_text_finish">完 成</string>
+	<string name="login_text_doing">"登录中,请稍候..."</string>
+	<string name="logout_text_doing">"退出中,请稍候..."</string>
+	<string name="password_text_next">下一步</string>
+	<string name="password_text_confirm_modify">确认修改</string>
+	<string name="password_text_set_success">恭喜！设置新密码成功。</string>
+	<string name="password_text_direct_login">"直接登录"</string>
+	
+	<!-- 通用部分 -->
+	<string name="common_network_abnormal">网络不给力，请检查网络连接</string>
+	<string name="common_network_loading">正在获取...</string>
+	<string name="common_network_load_failed">刷新失败，请检查网络！</string>
+	<string name="common_network_data_update">更新中，请稍后...</string>
+    <string name="common_network_data_get_failed">获取失败,请稍后再试"</string>
+    
+	<!-- 帐号提示 -->
+	<string name="kaccount_account_empty">"帐号不能为空"</string>
+	<string name="kaccount_pasword_empty">"密码不能为空"</string>
+	<string name="kaccount_account_error">"请输入正确的帐号"</string>
+	<string name="kaccount_password_error">"请输入正确的密码"</string>
+	<string name="kaccount_email_error">"请输入正确的邮箱"</string>
+	<string name="kaccount_login_mobile_err">"请输入有效的手机号"</string>
+	<string name="kaccount_retrive_pwd_mobvericode">"请输入手机号或验证码"</string>
+	<string name="kaccount_input_mobile_err">"您输入的手机号码不正确"</string>
+	<string name="kaccount_get_vericode_success">"验证码将以短信形式发送到您的手机"</string>
+	<string name="kaccount_get_vericode_failed">"获取验证码失败"</string>
+	<string name="kaccount_vericode_repeat_get">"短时间内不能重复发送验证码"</string>
+	<string name="kaccount_vericode_timer_more">"该手机号重复获取验证码次数过多，请明天再试"</string>
+	<string name="kaccount_retrive_pwd_mobile_unbind">"该手机尚未绑定，请确认输入是否正确"</string>
+	<string name="kaccount_reset_pwd_new_err">"请输入6-14位新密码"</string>
+	<string name="kaccount_reset_pwd_new_specail">"新密码不能含有特殊字符"</string>
+	<string name="kaccount_reset_pwd_new_lessonenum">"新密码至少包含1个数字和1个字母"</string>
+	<string name="kaccount_reset_pwd_success">"重置密码成功"</string>
+    <string name="kaccount_reset_pwd_failed">"重置密码失败"</string>
+    <string name="kaccount_vericode_has_invalid">"验证码已失效,请重新获取"</string>
+    <string name="kaccount_vericode_err">"短信验证码错误,请重试"</string>
+    <string name="kaccount_vericode_has_err">"验证码有误"</string>
+    <string name="kaccount_vericode_has_used">"验证码已校验"</string>
+    <string name="kaccount_login_failed">"登录失败"</string>
+    <string name="kaccount_login_user_err">"用户名不存在"</string>
+    <string name="kaccount_login_userpwd_err">"密码错误"</string>
+    <string name="kaccount_logout">"退出登录"</string>
+    <string name="kaccount_logout_failed">"登出失败，请检查网络"</string>
+    <string name="kaccount_locate_failed">"定位失败，请检查网络连接或到空旷地带重试"</string>
+    <string name="kaccount_invalid">"您的帐号已在其它终端上登录，您被迫下线。"</string>
+    
+    <!-- 个人信息 -->
+    <string name="userinfo_get_failed">获取用户信息失败</string>
+    <string name="userinfo_useralis_lenth">"昵称不能少于2个字符"</string>
+    <string name="userinfo_useralis_specchar">"昵称不能输入特殊字符"</string>
+	<string name="userinfo_revise_pwd_old_not_empty">"旧密码不能为空"</string>
+	<string name="userinfo_revise_pwd_new_not_empty"> "新密码不能为空"</string>
+	<string name="userinfo_revise_pwd_ensure_new"> "请确认新密码"</string>
+	<string name="userinfo_revise_pwd_new_old_unsame">"您输入的新密码不一致"</string>
+    <string name="userinfo_revise_pwd_same">"新密码不能与旧密码相同"</string>
+    <string name="userinfo_revise_pwd_old_err">"旧密码不正确"</string>
+    <string name="userinfo_revise_pwd_success">"修改密码成功"</string>
+    <string name="userinfo_revise_pwd_failed">"密码修改失败"</string>
+    <string name="userinfo_revise_mobile_same">"新手机号不能与原手机号相同"</string>
+    <string name="userinfo_revise_mobile_success">"修改手机号成功"</string>
+    <string name="userinfo_mobile_modify_title">"修改绑定手机"</string>
+    <string name="userinfo_mobile_has_binded"> "此号码已绑定了其他凯立德帐号，请重新填写，或使用该号码登录"</string>
+    <string name="userinfo_revise_mobile_failed">"修改失败,请稍后再试"</string>
+    <string name="userinfo_set_nick_failed">"昵称设置失败,请稍后再试"</string>
+    <string name="userinfo_set_sex_failed">"性别设置失败,请稍后再试"</string>
+    <string name="userinfo_set_distname_failed">"区域设置失败,请稍后再试"</string>
+    <string name="userinfo_set_car_num_empty">"车牌号不能为空"</string>
+    <string name="userinfo_set_car_num_error">"请输入正确的车牌号"</string>
+    <string name="userinfo_set_car_body_error">"请输入正确的车架号"</string>
+    <string name="userinfo_set_car_engine_error">"请输入正确的发动机号"</string>
+    <string name="userinfo_set_car_series_failed">"车辆信息设置失败,请稍后再试"</string>
+    <string name="userinfo_set_car_num_failed">"车牌信息设置失败,请稍后再试"</string>
+	<string name="userinfo_set_car_body_failed">"车架号号设置失败,请稍后再试"</string>
+	<string name="userinfo_set_car_engine_failed">"发动机号设置失败,请稍后再试"</string>
+	
+	<!-- 服务  -->
+	<string name="service_btn_watch_detail"><u>查看详情</u></string>
+	<string name="service_text_service_flow">总流量:</string> 
+	<string name="service_text_service_price">价格:</string>
+	<string name="service_text_service_count">服务项:</string>
+	<string name="service_text_service_end_time">到期时间:</string>
+	<string name="service_renewal_text_scan">手机扫描二维码</string>
+	<string name="service_renewal_text_prompt">温馨提示:</string>
+	<string name="service_prompt_text">"温馨提示：套餐总流量用完或服务时间到期，套餐内的在线服务将不可使用，请关注套餐流量使用情况及服务的有效期！"</string>
+	
+	<!-- InputDialog -->
+	<string name="input_dialog_confirm">确定</string>
+	<string name="input_dialog_save">保存</string>
+	<string name="input_dialog_title_mobile">输入手机号码</string>
+	<string name="input_dialog_title_vericode">输入验证码</string>
+	<string name="input_dialog_title_nickname">修改昵称</string>
+	<string name="input_dialog_title_plate">输入车牌号（后5位）</string>
+	<string name="input_dialog_title_car_body">输入车架号（后6位）</string>
+	<string name="input_dialog_title_car_engine">输入发动机号（后6位）</string>
+	<string name="input_dialog_title_modify_mobile">修改绑定手机</string>
+	<string name="input_dialog_title_account">输入帐号</string>
+	<string name="input_dialog_title_password">输入密码</string>
+	<string name="input_dialog_title_modify_password">设置新密码</string>
+	<string name="input_dialog_title_modify_password_affirm">确认新密码</string>
+	
+	<string name="input_dialog_hint_mobile">请输入11位手机号码</string>
+	<string name="input_dialog_hint_vericode">请输入验证码</string>
+	<string name="input_dialog_hint_nickname">请输入昵称</string>
+	<string name="input_dialog_hint_plate">请输入车牌号（后5位）</string>
+	<string name="input_dialog_hint_car_body">请输入车架号（后6位）</string>
+	<string name="input_dialog_hint_car_engine">请输入发动机号（后6位）</string>
+	<string name="input_dialog_hint_modify_mobile">请输入新手机号码</string>
+	<string name="input_dialog_hint_account">请输入手机号/邮箱/用户名</string>
+	<string name="input_dialog_hint_password">请输入密码</string>
+	<string name="input_dialog_hint_modify_password">请输入新密码</string>
+	
+	<!-- 激活窗口 -->
+	<string name="activate_dialog_title">凯立德服务卡激活</string>
+	<string name="activate_dialog_text">服务卡赠送套餐</string>
+	<string name="activate_dialog_tip_1">检测到您的服务卡未激活，请先激活服务卡后再进行下一步操作</string>
+	<string name="activate_dialog_tip_2">提示：赠送的套餐使用完之后，可以在&#160;&#160;&#160;K云-服务内容&#160;&#160;&#160;自行充值或购买新的套餐</string>
+	<string name="activate_dialog_btn_text">点击激活</string>
+	
+	
+	<string name="setting_male">男</string>
+	<string name="setting_female">女</string>
+	<string name="setting_unset">未设置</string>
+	
+	<string name="alarm_tip_first_day">温馨提示：您的服务套餐即将到期，为保证在线服务正常使用，请您尽快续费！</string>
+	<string name="alarm_tip_second_day">温馨提示：您的套餐已过期了，为保证在线服务正常使用，请您尽快续费！</string>
+	<string name="alarm_tip_first_flow">温馨提示：您的套餐剩余流量不多了，为保证在线服务正常使用，请您尽快续费！</string>
+	<string name="alarm_tip_second_flow">温馨提示：您的套餐流量已用完了，为保证在线服务正常使用，请您尽快续费！</string>
+	<string name="alarm_tip_renewal">立即续费</string>
+	
+	<string name="package_tip_see_details">查看详情</string>
+	<string name="package_tip_purchase_uccess1">温馨提示：“ %s ”已为您订购成功！</string>
+	<string name="package_tip_purchase_uccess2">温馨提示：已为您订购成功！</string>
+	
+	<string name="simcard_tip_check">SIM卡检测中...</string>
+	<string name="simcard_tip_normal">服务卡正常。</string>
+	<string name="simcard_tip_no_car">未检测到卡，请在SIM卡槽中插入凯立德服务卡，重启机器按提示完成激活流程享受更多凯立德在线服务。</string>
+	<string name="simcard_tip_car_unactivate">服务卡未激活，请致电凯立德官方客服电话：400-789-0118</string>
+	<string name="simcard_tip_car_unbelong">请插入随机配送的服务卡，畅享凯立德车联网服务！如服务卡遗失，请致电凯立德官方客服电话：400-789-0118</string>
+	<string name="simcard_tip_device_unbelong">设备异常，请致电凯立德官方客服电话：400-789-0118</string>
+	<string name="simcard_tip_car_bind_error">服务卡异常(%d)，请致电凯立德官方客服电话：400-789-0118</string>
+	<string name="simcard_tip_network_error">网络异常，请检查SIM卡是否插入或致电凯立德官方客服电话：400-789-0118</string>
+	
+	<string name="msg_type_message">活动消息</string>
+	<string name="msg_type_upgrade">升级消息</string>
+	<string name="msg_updated_just">刚刚</string>
+	<string name="msg_updated_minutes_ago">%d分钟前</string>
+	<string name="msg_updated_hours_ago">%d小时前</string>
+	<string name="msg_updated_days_ago">%d天前</string>
+	<string name="msg_updated_months_ago">%d月前</string>
+	<string name="msg_message1">消息：共%d条消息</string>
+	<string name="msg_message2">%d条未读</string>
+	<string name="msg_message3">条消息</string>
+	<string name="msg_message4">条未读</string>
+	
+	<string name="service_package_name">享受%s服务</string>
+	<string name="service_package_count">%d项</string>
+	<string name="service_package_chagre">%d元</string>
+	<string name="service_package_number">(%d份)</string> 
+	
+	<string name="service_package_tobe_open">待开启</string>
+	<string name="service_package_opened">已启用</string>
+	<string name="service_package_expired">已过期</string>
+	<string name="service_package_disabled">已禁用</string>
+	
+	<string name="person_location">正在定位</string>
+	<string name="person_unable_location">无法获取当前位置</string>
+	<string name="person_city">市</string>
+	<string name="person_special_region">特别行政区</string>
+	<string name="person_zhuang_region">壮族自治区</string>
+	<string name="person_hui_region">回族自治区</string>
+	<string name="person_uygur_region">维吾尔自治区</string>
+	<string name="person_auto_region">自治区</string>
+	<string name="person_province">省</string>
+	<string name="car_select_models">请选择车型</string>
+	<string name="car_select_series">请选择车系</string>
+	
+	<string name="dialog_sure">确定</string>
+	<string name="dialog_cancel">取消</string>
+	<string name="dialog_msg_exit">确定要退出登录?</string>
+	<string name="dialog_msg_fill_plate">请先填写车牌号</string>
+	<string name="toast_enter_letters_or_numbers">请输入字母或数字</string>
+	
+	<!-- widget -->
+	<string name="appwidget_title">K云</string>
+	<string name="appwidget_refreshing">正在刷新</string>
+	<string name="appwidget_undetected_sim">未检测到SIM卡</string>
+	<string name="appwidget_network_unconnection">网络未连接</string>
+	<string name="appwidget_sim_abnormal">服务卡异常</string>
+	<string name="appwidget_updated_just">刚刚更新</string>
+	<string name="appwidget_updated_hours_ago">小时前更新</string>
+	<string name="appwidget_updated_days_ago">天前更新</string>
+	<string name="appwidget_updated_months_ago">月前更新</string>
+	<string name="appwidget_updated_years_ago">年前更新</string>
+	<string name="appwidget_status_using">正在使用</string>
+	<string name="appwidget_status_expired">已到期</string>
+	<string name="appwidget_status_expiring">即将到期</string>
+	
+	<string name="loadsucess">微信扫一扫\n加入小凯互联</string>
+    <string name="loading">二维码获取中...</string>
+	<string name="loaderror">二维码刷新失败\n点击重试</string>
+	<string name="networkerror">网络异常\n请检查网络</string>
+	<string name="nosimcardtip">未检测到卡,请在SIM卡槽中插入凯立德服务卡,并按提示完成激活流程以享受更多凯立德在线服务</string> 
+	
+</resources>

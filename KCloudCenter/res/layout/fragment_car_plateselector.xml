@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/layout_right_bg" >
+	
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/carplate_selector_title_height"
+        android:layout_marginLeft="@dimen/carplate_selector_title_margin"
+        android:layout_marginRight="@dimen/carplate_selector_title_margin"
+        android:text="输入车牌号码"
+        android:gravity="center"
+        android:textColor="@color/text_normal_color"
+        android:textSize="@dimen/size_normal" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/carplate_selector_body_height"
+        android:layout_marginLeft="@dimen/carplate_selector_body_margin"
+        android:layout_marginRight="@dimen/carplate_selector_body_margin"
+        android:paddingLeft="@dimen/carplate_selector_body_padding"
+        android:paddingRight="@dimen/carplate_selector_body_padding"
+        android:orientation="horizontal"
+        android:background="@color/carplate_selector_wheel_bg" >
+        
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/plate_selector_wheel_province"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+        
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/plate_selector_wheel_letter"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1" />
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginTop="105dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:background="@null"
+            android:orientation="vertical" >
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/carplate_selector_spilt_bg" />
+            
+            <EditText
+                android:id="@+id/plate_selector_edit_plate"
+                android:layout_width="@dimen/carplate_selector_edit_width"
+                android:layout_height="@dimen/carplate_selector_edit_height"
+                android:paddingLeft="@dimen/carplate_selector_edit_margin"
+                android:paddingRight="@dimen/carplate_selector_edit_margin"
+                android:layout_marginTop="12dp"
+                android:hint="请输入车牌号"
+                android:textSize="@dimen/size_x_max_normal"
+                android:textColorHint="@color/text_gray_color_70"
+                android:background="@color/carplate_selector_edit_bg" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/carplate_selector_spilt_bg" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/plate_selector_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/carplate_selector_btn_height"
+        android:layout_marginLeft="@dimen/carplate_selector_body_margin"
+        android:layout_marginRight="@dimen/carplate_selector_body_margin"
+        android:background="@drawable/selector_btn_vericode"
+        android:text="保 存"
+        android:textSize="@dimen/size_x_max_normal"
+        android:textColor="@color/text_hightlight_color" />
+	
+</LinearLayout>

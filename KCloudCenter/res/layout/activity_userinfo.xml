@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/layout_bg"
+    android:orientation="horizontal" >
+
+    <RadioGroup
+        android:id="@+id/fragment_selector"
+        android:layout_width="@dimen/userinfo_layout_left_width"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+		android:orientation="vertical"
+		android:background="@color/userinfo_layout_left_bg"
+		android:checkedButton="@+id/userinfo_layout_personal" >
+		
+        <cld.kcloud.utils.control.CldDrawableCenterRadioButton
+            android:id="@+id/userinfo_layout_personal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/userinfo_layout_left_height"
+            android:background="@drawable/selector_radio_frgment_bg"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/size_x_max_normal"
+		    android:button="@null"
+		    android:drawableLeft="@drawable/selector_fragment_personal"
+		    android:text="个人信息  "
+		    android:textColor="@color/text_hightlight_color"/>
+        
+        <View
+            android:id="@+id/userinfo_layout_left_spilt_personal_carinfo"
+            android:layout_width="@dimen/userinfo_layout_left_separate_width"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/userinfo_layout_split_bg" >
+        </View>
+        
+        <cld.kcloud.utils.control.CldDrawableCenterRadioButton
+            android:id="@+id/userinfo_layout_carinfo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/userinfo_layout_left_height"
+            android:background="@drawable/selector_radio_frgment_bg"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/size_x_max_normal"
+		    android:button="@null"
+		    android:drawableLeft="@drawable/selector_fragment_carinfo"
+		    android:text="爱车信息  "
+		    android:textColor="@color/text_hightlight_color"/>
+        
+        <View
+            android:id="@+id/userinfo_layout_left_spilt_carinfo_service"
+            android:layout_width="@dimen/userinfo_layout_left_separate_width"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/userinfo_layout_split_bg" >
+        </View>
+        
+        <cld.kcloud.utils.control.CldDrawableCenterRadioButton
+            android:id="@+id/userinfo_layout_service"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/userinfo_layout_left_height"
+            android:background="@drawable/selector_radio_frgment_bg"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/size_x_max_normal"
+		    android:button="@null"
+		    android:drawableLeft="@drawable/selector_fragment_content"
+		    android:text="服务内容  "
+		    android:textColor="@color/text_hightlight_color"/>
+        
+        <View
+            android:id="@+id/userinfo_layout_left_spilt_service_flow"
+            android:layout_width="@dimen/userinfo_layout_left_separate_width"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/userinfo_layout_split_bg" >
+        </View>
+        
+        <cld.kcloud.utils.control.CldDrawableCenterRadioButton
+            android:id="@+id/userinfo_layout_netdata"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/userinfo_layout_left_height"
+            android:background="@drawable/selector_radio_frgment_bg"
+            android:drawablePadding="30dp"
+            android:textSize="@dimen/size_x_max_normal"
+		    android:button="@null"
+		    android:drawableLeft="@drawable/selector_fragment_netdata"
+		    android:text="流量统计  "
+		    android:textColor="@color/text_hightlight_color"/>
+    </RadioGroup>
+    
+    <FrameLayout
+        android:id="@+id/fragment_userinfo_container"
+        android:layout_width="@dimen/userinfo_layout_right_width"
+        android:layout_height="fill_parent"
+        android:background="@color/layout_right_bg" />
+</LinearLayout>

@@ -1,0 +1,155 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/layout_right_bg" >
+
+    <include
+        android:id="@+id/flow_manager_getting_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/view_fragment_getting"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/flow_manager_success_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="@dimen/flow_info_progress_left_margin"
+            android:layout_marginTop="@dimen/flow_info_progress_top_margin" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <cld.kcloud.utils.control.CldArcProgress
+                    android:id="@+id/flow_manager_arcprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/flow_manager_text_flow_remain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_green_color_flow"
+                    android:textSize="@dimen/size_xxxx_max_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="剩余"
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_x_max_normal" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/flow_info_layout_left_margin"
+            android:layout_marginTop="@dimen/flow_info_layout_top_margin"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/flow_manager_text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textColor="@color/text_hightlight_color_flow"
+                android:textSize="@dimen/size_x_max_normal" />
+
+            <!-- <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/flow_info_layout_text_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已使用: "
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_x_max_normal" />
+
+                <TextView
+                    android:id="@+id/flow_manager_text_flow_use"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/flow_info_edit_left_margin"
+                    android:background="#00000000"
+                    android:enabled="false"
+                    android:textColor="@color/text_hightlight_color_flow"
+                    android:textSize="@dimen/size_x_max_normal" />
+            </LinearLayout> -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/flow_info_layout_text_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="总流量: "
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_x_max_normal" />
+
+                <TextView
+                    android:id="@+id/flow_manager_text_flow_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/flow_info_edit_left_margin"
+                    android:textColor="@color/text_hightlight_color_flow"
+                    android:textSize="@dimen/size_x_max_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/flow_info_layout_text_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更新时间 : "
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_x_max_normal" />
+
+                <TextView
+                    android:id="@+id/flow_manager_text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/flow_info_time_margin"
+                    android:layout_marginRight="@dimen/flow_info_time_margin"
+                    android:textColor="@color/text_hightlight_color_flow"
+                    android:textSize="@dimen/size_x_max_normal" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/flow_manager_failed_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_fragment_load_failed"
+        android:visibility="gone" />
+
+</FrameLayout>

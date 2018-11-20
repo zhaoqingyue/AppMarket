@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_widget_kcloud"
+    android:layout_width="235dp"
+    android:layout_height="440dp"
+    android:background="@drawable/appwidget_background" >
+
+    <ImageView
+        android:id="@+id/id_widget_kcloud_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY"
+        android:src="@drawable/selector_widget_bg"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/id_widget_kcloud_layout_getting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/id_widget_kcloud_getting"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/appwidget_icon_failed"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_widget_kcloud_getting"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="正在加载..."
+            android:textColor="@color/appwidget_highlight_color"
+            android:textSize="@dimen/font_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_widget_kcloud_layout_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/id_widget_kcloud_flow"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp" >
+
+            <ImageView
+                android:id="@+id/id_widget_kcloud_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitXY"
+                android:src="@drawable/appwidget_flow_0"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/id_widget_kcloud_update_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/font_18" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_widget_kcloud_update_time"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/id_widget_kcloud_flow_remain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/appwidget_highlight_color"
+                    android:textSize="@dimen/font_30" />
+
+                <TextView
+                    android:id="@+id/id_widget_kcloud_flow_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/appwidget_util_color"
+                    android:textSize="@dimen/font_20" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp"
+                android:text="剩余"
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/font_22" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_widget_kcloud_curtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_widget_kcloud_flow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/appwidget_highlight_color"
+            android:textSize="@dimen/font_24" />
+
+        <TextView
+            android:id="@+id/id_widget_kcloud_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_widget_kcloud_flow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:ellipsize="end"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/appwidget_highlight_color"
+            android:textSize="@dimen/font_24" />
+
+        <TextView
+            android:id="@+id/id_widget_kcloud_maturity"
+            android:layout_width="142dp"
+            android:layout_height="47dp"
+            android:layout_below="@+id/id_widget_kcloud_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/appwidget_stroke"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/appwidget_highlight_color"
+            android:textSize="@dimen/font_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/id_widget_kcloud_layout_failed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/id_widget_kcloud_failed_icon"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/appwidget_icon_failed"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/id_widget_kcloud_failed_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_widget_kcloud_failed_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="加载失败"
+            android:textColor="@color/appwidget_highlight_color"
+            android:textSize="@dimen/font_24" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,299 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_right_bg" >
+
+    <include
+        android:id="@+id/carinfo_layout_getting_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/view_fragment_getting"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/carinfo_layout_success_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/carinfo_layout_margin"
+            android:layout_marginRight="@dimen/carinfo_layout_margin"
+            android:background="#00000000"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/carinfo_layout_body_height_top"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="品牌 : "
+                        android:textColor="@color/text_normal_color"
+                        android:textSize="@dimen/size_max_normal" />
+
+                    <TextView
+                        android:id="@+id/carinfo_text_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/carinfo_middle_left_margin"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:textColor="@color/text_hightlight_color"
+                        android:textSize="@dimen/size_max_normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车型 : "
+                        android:textColor="@color/text_normal_color"
+                        android:textSize="@dimen/size_max_normal" />
+
+                    <TextView
+                        android:id="@+id/carinfo_text_model"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/carinfo_middle_left_margin"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_hightlight_color"
+                        android:textSize="@dimen/size_max_normal" />
+
+                    <Button
+                        android:id="@+id/carinfo_btn_series_modify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:text="修改"
+                        android:textColor="@color/text_normal_color"
+                        android:textSize="@dimen/size_x_max_normal" />
+
+                    <ImageButton
+                        android:id="@+id/carinfo_imgbtn_series_modify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                        android:background="@null"
+                        android:src="@drawable/img_edit" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车系 : "
+                        android:textColor="@color/text_normal_color"
+                        android:textSize="@dimen/size_max_normal" />
+
+                    <TextView
+                        android:id="@+id/carinfo_text_series"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/carinfo_middle_left_margin"
+                        android:textColor="@color/text_hightlight_color"
+                        android:textSize="@dimen/size_max_normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/car_layout_split_bg" >
+            </LinearLayout>
+
+            <!-- 车牌号 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/carinfo_layout_body_height_buttom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车牌号 : "
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_max_normal" />
+
+                <TextView
+                    android:id="@+id/carinfo_text_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/carinfo_middle_left_margin"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/text_hightlight_color"
+                    android:textSize="@dimen/size_max_normal" />
+
+                <Button
+                    android:id="@+id/carinfo_btn_number_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:text="修改"
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_x_max_normal" />
+
+                <ImageButton
+                    android:id="@+id/carinfo_imgbtn_number_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                    android:background="@null"
+                    android:src="@drawable/img_edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/car_layout_split_bg" >
+            </LinearLayout>
+
+            <!-- 车架号 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/carinfo_layout_body_height_buttom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车架号(后6位) : "
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_max_normal" />
+
+                <TextView
+                    android:id="@+id/carinfo_text_body"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/carinfo_middle_left_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColor="@color/text_hightlight_color"
+                    android:textSize="@dimen/size_max_normal" />
+
+                <Button
+                    android:id="@+id/carinfo_btn_body_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:text="修改"
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_x_max_normal" />
+
+                <ImageButton
+                    android:id="@+id/carinfo_imgbtn_body_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                    android:background="@null"
+                    android:src="@drawable/img_edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/car_layout_split_bg" >
+            </LinearLayout>
+
+            <!-- 发动机号 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/carinfo_layout_body_height_buttom"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发动机号(后6位) : "
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_max_normal" />
+
+                <TextView
+                    android:id="@+id/carinfo_text_engine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/carinfo_middle_left_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColor="@color/text_hightlight_color"
+                    android:textSize="@dimen/size_max_normal" />
+
+                <Button
+                    android:id="@+id/carinfo_btn_engine_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:text="修改"
+                    android:textColor="@color/text_normal_color"
+                    android:textSize="@dimen/size_x_max_normal" />
+
+                <ImageButton
+                    android:id="@+id/carinfo_imgbtn_engine_modify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                    android:background="@null"
+                    android:src="@drawable/img_edit" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/carinfo_progress_getting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/qrcode_animation"
+            android:indeterminateDuration="1000" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/carinfo_layout_failed_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_fragment_load_failed"
+        android:visibility="gone" />
+
+</FrameLayout>

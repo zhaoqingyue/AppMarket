@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/service_renewal_left"
+        android:layout_width="@dimen/service_renewal_img_qrcode_left_width"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/service_renewal_img_qrcode_left_margin" >
+
+        <ImageView
+            android:id="@+id/service_renewal_qrcode"
+            android:layout_width="@dimen/service_renewal_img_qrcode_left_width"
+            android:layout_height="@dimen/service_renewal_img_qrcode_left_width"
+            android:layout_centerVertical="true"
+            android:background="@color/button_white_bk"
+            android:contentDescription="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/service_renewal_getting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/service_renewal_qrcode"
+            android:layout_alignLeft="@+id/service_renewal_qrcode"
+            android:layout_alignRight="@+id/service_renewal_qrcode"
+            android:layout_alignTop="@+id/service_renewal_qrcode"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/qrcode_loading" />
+
+        <ImageView
+            android:id="@+id/service_renewal_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/service_renewal_qrcode"
+            android:layout_alignLeft="@+id/service_renewal_qrcode"
+            android:layout_alignRight="@+id/service_renewal_qrcode"
+            android:layout_alignTop="@+id/service_renewal_qrcode"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/qrcode_error" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/service_renewal_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/service_renewal_center_layout_left_margin"
+        android:layout_toRightOf="@+id/service_renewal_left"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="@string/service_renewal_text_scan"
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/size_max_normal" />
+
+        <TextView
+            android:id="@+id/service_renewal_combo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="享受车联网服务"
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/size_max_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/service_renewal_center_layout_item_top_margin"
+            android:includeFontPadding="false"
+            android:text="@string/service_renewal_text_prompt"
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/size_max_normal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐使用"
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/size_max_normal" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:background="@null"
+                android:src="@drawable/img_service_wechat" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="或"
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/size_max_normal" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@null"
+                android:src="@drawable/img_service_alipay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫码"
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/size_max_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

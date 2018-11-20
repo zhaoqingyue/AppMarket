@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/service_prompt_text_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/service_prompt_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/service_prompt_text_height"
+        android:background="@color/service_promot_bg"
+        android:padding="@dimen/service_prompt_text_padding"
+        android:text="@string/service_prompt_text"
+        android:textSize="@dimen/size_normal"
+        android:textColor="@color/text_hightlight_color" />
+    
+    <cld.kcloud.utils.control.CldTriangleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginLeft="@dimen/service_prompt_triangle_right_margin"
+        android:layout_marginRight="@dimen/service_prompt_triangle_right_margin" />
+
+</LinearLayout>

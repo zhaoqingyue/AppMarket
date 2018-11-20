@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/widget_kcloud"
+    android:minHeight="440dp"
+    android:minWidth="235dp"
+    android:previewImage="@drawable/appwidget_background"
+    android:updatePeriodMillis="86400000" >
+
+</appwidget-provider>

@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_user"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/layout_bg" >
+
+    <FrameLayout
+        android:id="@+id/fragment_user_container"
+        android:layout_width="1480dp"
+        android:layout_height="fill_parent" />
+		
+</LinearLayout>

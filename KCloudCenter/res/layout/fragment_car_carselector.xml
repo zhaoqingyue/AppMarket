@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_right_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/car_selector_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/car_selector_title_height"
+        android:layout_marginLeft="@dimen/car_selector_title_margin"
+        android:layout_marginRight="@dimen/car_selector_title_margin"
+        android:gravity="center"
+        android:text="选择汽车品牌"
+        android:textColor="@color/text_normal_color"
+        android:textSize="@dimen/size_normal" />
+    
+    <include
+        android:id="@+id/car_selector_getting_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/view_fragment_getting"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/car_selector_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_selector_body_height"
+        android:layout_below="@+id/car_selector_title"
+        android:layout_marginLeft="@dimen/car_selector_body_margin"
+        android:layout_marginRight="@dimen/car_selector_body_margin"
+        android:background="@color/car_selector_wheel_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/car_selector_body_padding"
+        android:paddingRight="@dimen/car_selector_body_padding"
+        android:visibility="gone" >
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/car_selector_wheel_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/car_selector_wheel_carbrand"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="48dp"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/car_selector_wheel_carmodle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1" />
+
+        <kankan.wheel.widget.WheelView
+            android:id="@+id/car_selector_wheel_carseries"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="2" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/car_selector_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/car_selector_btn_height"
+        android:layout_below="@+id/car_selector_wheel"
+        android:layout_marginLeft="@dimen/car_selector_body_margin"
+        android:layout_marginRight="@dimen/car_selector_body_margin"
+        android:background="@drawable/selector_btn_vericode"
+        android:text="保存"
+        android:textColor="@color/text_hightlight_color"
+        android:textSize="@dimen/size_x_max_normal"
+        android:visibility="gone" />
+
+</RelativeLayout>

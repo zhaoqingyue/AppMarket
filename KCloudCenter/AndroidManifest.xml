@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cld.kcloud.center"
+	
+    android:versionCode="31"
+    android:versionName="1.5.3" >
+    
+    <!-- android:sharedUserId="android.uid.system" -->
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="cld.kcloud.center.KCloudCenterApp"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- 添加 android:configChanges="mcc|mnc|orientation" 属性，解决重启后执行2次的问题 -->
+        <!-- 首次登录activity -->
+        <activity
+            android:name="cld.kcloud.user.KCloudMainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="mcc|mnc|orientation" >
+            <intent-filter>
+                <action android:name="android.intent.action.KCloudMainActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+
+        <!-- 添加主题：android:theme="@style/KCloudUserTheme"， 解决Activity之间跳转短暂黑屏的问题-->
+        <!-- android:windowSoftInputMode="adjustPan" -->
+        <!-- 登录activity -->
+        <activity
+            android:name="cld.kcloud.user.KCloudUserActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:configChanges="mcc|mnc|orientation"
+            android:launchMode="singleTask"
+            android:theme="@style/KCloudUserTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 用户信息activity -->
+        <activity
+            android:name="cld.kcloud.user.KCloudUserInfoActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan|stateHidden" 
+            android:launchMode="singleTask"
+            android:configChanges="mcc|mnc|orientation" >
+            <intent-filter>
+                <action android:name="android.intent.action.KCloudUserInfoActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 第三方登录相关activity -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100574133" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微信回调界面 -->
+        <activity
+            android:name="cld.navi.mainframe.wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <!-- K云启动服务：供Launcher调用 -->
+        <service 
+            android:name="cld.kcloud.service.KCloudService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="cld.kcloud.center.aidl.service" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        
+        <!-- 静默安装服务：实现静默安装和静默卸载功能(需要系统权限) -->
+        <service
+            android:name="cld.kmarket.install.InstallerService"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:scheme="package" />
+                <data android:mimeType="cld_application/vnd.android.package-archive" />
+            </intent-filter>
+        </service>
+        
+        <!-- Package安装接收器 -->
+        <receiver
+            android:name="cld.kmarket.install.PackageReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- 安装状态接收器 -->
+        <receiver
+            android:name="cld.kmarket.install.InstallerReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cld.installer.INSTALL_START" />
+                <action android:name="cld.installer.INSTALL_PROGRESS" />
+                <action android:name="cld.installer.INSTALL_COMPLETE" />
+                <action android:name="cld.installer.DELETE_START" />
+                <action android:name="cld.installer.DELETE_PROGRESS" />
+                <action android:name="cld.installer.DELETE_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- 网络变化状态 -->
+        <receiver 
+            android:name="cld.kcloud.broadcast.KCloudNetBroadcastReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- K云Widget -->
+        <receiver
+            android:name="cld.kcloud.appwidget.KCloudWidget"
+            android:label="@string/appwidget_title" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="cld.kcloud.action.FLOW_FRESH" />
+                <action android:name="cld.kcloud.action.FLOW_GET_SUCCESS" />
+                <action android:name="cld.kcloud.action.FLOW_GET_FAILED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/kcloud_app_widget" />
+        </receiver>
+
+        <!-- 数据库 -->
+        <provider
+            android:name="cld.kcloud.database.DatabaseManager"
+            android:authorities="cld.kcloud.database.DatabaseManager"
+            android:exported="false" />
+        
+        
+        <!-- ++++++++++++++++++++ 位置上报  ++++++++++++++++++++++++++++++++ -->
+     
+        <service
+            android:name="cld.navi.position.frame.MainService"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cld.navi.mirrtalk.startService" />
+            </intent-filter>
+        </service>
+        
+        <service
+            android:name="cld.navi.position.frame.MonitorService"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cld.navi.mirrtalk.monitorService" />
+            </intent-filter>
+        </service>
+        
+        <receiver android:name="cld.navi.receiver.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="cn.flyaudio.action.ACCON" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver 
+            android:name="cld.navi.receiver.EvtAccStatusReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.stcloud.drive.EVT_ACC_STATUS" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver 
+            android:name="cld.navi.receiver.ShowDisclaimerReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="com.txznet.launcher.Disclaimer.click" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- 渠道，建议：客户+版本号+地图版本号 -->
+        <meta-data
+            android:name="Channel"
+            android:value="OEM服务" >
+        </meta-data>
+        
+        <!-- java代码 + c代码svn版本号 -->
+        <meta-data
+            android:name="Revision"
+            android:value="Sev18" />
+        
+        <!-- ++++++++++++++++++++ 位置上报  ++++++++++++++++++++++++++++++++ -->
+        
+    </application>
+
+    <!-- 添加权限 -->
+    <!-- 允许程序挂载和反挂载文件系统可移动存储 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许程序读取所有者数据的权限 -->
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <!-- 允许程序写入但不读取所有者数据 -->
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <!-- 允许程序在内置存储中写文件(4.0之后的storage下挂载的卡，4.0之前的mnt下挂载的卡) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序在外置存储中写文件(4.0之后的mnt下挂载的卡，4.0之前不需要这个权限) -->
+    <!-- 因为有这一条权限，所以只要修改了Manifest就会导致Eclipse报错，Clean一下就好了 -->
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <!-- 允许程序访问GPS位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许程序读取设备信息 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序读取用户联系人数据 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许程序访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序请求访问使用照相设备 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 允许程序访问有关GSM网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序改变Z轴排列任务 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <!-- 允许程序读取底层系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 允许程序重新启动其他程序 -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 允许程序写入API设置 -->
+    <!-- <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" /> -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- SDK 2.3 需要 android.permission.WRITE_SETTINGS 权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 百度定位 -->
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <!-- 用于评论模块分享位置信息 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 获取当前系统运行时所有存在的task信息 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 系统安装 -->
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <!-- 系统卸载 -->
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <!-- 读取外设 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    
+    
+    <!-- ++++++++++++++++++++ 位置上报  ++++++++++++++++++++++++++++++++ -->
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 添加接收开机完成的广播权限 -->
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <!-- ++++++++++++++++++++ 位置上报  ++++++++++++++++++++++++++++++++ -->
+
+</manifest>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="layout_bg">#262626</color>
+    <color name="layout_right_bg">#1f1f1f</color>
+    <color name="layout_input_bg">#D8ffffff</color>
+    
+    <color name="text_disnable_color">#33ffffff</color>
+    <color name="text_hightlight_color">#ffffff</color>
+    <color name="text_hint_color">#707273</color>
+    <color name="text_black_color">#282828</color>
+    <color name="text_normal_color">#ababab</color>
+    <color name="text_green_color">#27a72d</color>
+    
+    <color name="button_login_unpressed_color">#31b31f</color>
+    <color name="button_login_pressed_color">#1f8511</color>
+    <color name="button_vericode_disnable_color">#474a4d</color>
+    <color name="button_vericode_enable_color">#636770</color>
+
+    <color name="button_disable_bg_color">#474a4d</color>
+    <color name="button_enable_bg_color">#636770</color>
+    <color name="button_green_color">#27a72d</color>
+
+    <color name="edit_background">#ced1d3</color>
+    <color name="input_dialog_edit_bg">#ced1d3</color>
+    <color name="input_dialog_btn_bg">#636770</color>
+    
+    <color name="text_black_color_41">#414141</color>
+    <color name="text_black_color_53">#535353</color>
+    <color name="text_gray_color_7a">#7a7a7a</color>
+    <color name="text_gray_color_70">#707273</color>
+    <color name="text_gray_color_a5">#a5a5a5</color>
+    <color name="text_hightlight_color_flow">#f0f0f0</color>
+    <color name="text_btn_gray_color">#9c9ea3</color>
+    <color name="text_dark_color">#666666</color>
+    
+    <color name="text_hightlight_color_transparent">#33ffffff</color>
+    <color name="text_count_down_color">#ff9900</color>
+    <color name="text_red_color">#ff0000</color>
+    <color name="text_green_color_userinfo">#2e9d1f</color>
+    <color name="text_green_color_flow">#27a72d</color>
+    
+    <color name="edit_bk_color">#ced1d3</color>
+    <color name="split_bg_color">#474a4d</color>
+    
+    <color name="button_highlight_bk_color">#31b31f</color>
+    <color name="button_select_bk_color">#0f7f00</color>
+    <color name="button_white_bk">#ffffff</color>
+
+    <color name="button_vericode_enable">#636770</color>
+    <color name="button_vericode_disable">#33FFFFFF</color>
+    
+    <color name="car_layout_split_bg">#505050</color>
+    <color name="car_layout_head_bg">#393939</color>
+    
+    <color name="car_selector_wheel_bg">#2e2e2e</color>
+    <color name="car_selector_btn_text">#bbbbbb</color>
+    <color name="car_selector_btn_save_bg">#349c26</color>
+    <color name="car_selector_btn_cancle_bg">#63676f</color>
+    
+    <color name="city_selector_center_rect_color">#413e3f</color>
+    <color name="city_selector_wheel_bg">#2e2e2e</color>
+    <color name="city_wheel_bg_color">#2e2e2e</color>
+    
+    <color name="carplate_selector_wheel_bg">#2e2e2e</color>
+    <color name="carplate_selector_btn_text">#bbbbbb</color>
+    <color name="carplate_selector_btn_save_bg">#349c26</color>
+    <color name="carplate_selector_btn_cancle_bg">#63676f</color>
+    <color name="carplate_selector_spilt_bg">#57595d</color>
+    <color name="carplate_selector_edit_hint">#707173</color>
+    <color name="carplate_selector_edit_bg">#ced1d3</color>
+    
+    <color name="userinfo_layout_left_bg">#3e4044</color>
+    <color name="userinfo_layout_right_head_bg">#393939</color>
+    <color name="userinfo_layout_left_click_bg">#27a72d</color>
+    <color name="userinfo_layout_split_bg">#505050</color>
+    <color name="userinfo_nick_layout_bg">#515151</color>
+    <color name="userinfo_btn_password_modify">#215f1b</color>
+    <color name="userinfo_btn_password_loginout">#a10c0c</color>
+    <color name="userinfo_location_head_bg">#3e4044</color>
+    <color name="userinfo_sex_selector_bg">#3c3e44</color>
+    
+    <color name="service_promot_bg">#63676f</color>
+    
+    <color name="province_line_border">#C7C7C7</color>
+    
+    <color name="mobile_manager_edit_bg_color">#ced1d3</color>
+    <color name="mobile_manager_btn_bg_color">#63676f</color>
+    <color name="pwd_manager_edit_bg_color">#383b3d</color>
+	
+	<color name="user_message_layout_bg_color">#36373b</color>
+	<color name="user_message_separate_bg_color">#413e3f</color>
+	
+	<color name="activate_bg_color">#323232</color>
+	<color name="orange_color">#ff9600</color>
+	
+	<color name="appwidget_normal_color">#8b8a94</color>
+    <color name="appwidget_highlight_color">#ffffff</color>
+    <color name="appwidget_util_color">#b2b2b8</color>
+    <color name="appwidget_stroke_color">#60606f</color>
+</resources>

@@ -1,0 +1,5 @@
+id:28
+naviver:K3659-L5R01
+mapver:3921D0S
+DeviceId:KL
+cid:1020

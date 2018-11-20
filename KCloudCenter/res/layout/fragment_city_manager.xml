@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/city_manager_layout_bottom_margin"
+    android:layout_marginLeft="@dimen/city_manager_layout_right_left_margin"
+    android:layout_marginRight="@dimen/city_manager_layout_right_left_margin"
+    android:layout_marginTop="@dimen/city_manager_layout_top_margin"
+    android:background="#00000000"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/city_manager_layout_location"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/city_manager_head_height"
+        android:background="@color/userinfo_location_head_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left" >
+
+            <ImageView
+                android:id="@+id/city_manager_image_tolocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/img_to_location" />
+
+            <ImageView
+                android:id="@+id/city_manager_image_showlocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:src="@drawable/img_show_location" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="@dimen/city_manager_split_height"
+            android:layout_marginLeft="@dimen/city_manager_split_margin_left"
+            android:background="@color/car_layout_split_bg" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/city_manager_text_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:text="你的位置 : "
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/size_x_max_normal" />
+
+        <EditText
+            android:id="@+id/city_manager_edit_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@null"
+            android:enabled="false"
+            android:text="深圳市福田区"
+            android:textColor="@color/text_hightlight_color"
+            android:textSize="@dimen/size_x_max_normal" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:text="切换区域 : "
+        android:textColor="@color/text_normal_color"
+        android:textSize="@dimen/size_min_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/city_manager_wheel_height"
+            android:background="@color/city_wheel_bg_color"
+            android:orientation="horizontal" >
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/city_manager_wheel_province"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/city_manager_wheel_city"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/city_manager_wheel_district"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/city_manager_btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/city_manager_btn_height"
+            android:background="@drawable/selector_btn_location_save"
+            android:text="保 存"
+            android:textColor="@color/text_hightlight_color"
+            android:textSize="@dimen/size_x_max_normal" />
+    </LinearLayout>
+
+</LinearLayout>

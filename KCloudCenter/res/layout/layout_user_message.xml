@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:minHeight="@dimen/user_message_layout_body_height"
+    android:background="@color/user_message_layout_bg_color" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_weight="2"
+        	android:gravity="center_vertical" >
+        	<ImageView
+        	    android:id="@+id/usermessage_img_flag"
+           	 	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:layout_marginLeft="@dimen/user_message_right_margin"
+            	android:src="@drawable/img_message_state_false" />
+        
+        	<TextView
+            	android:id="@+id/usermessage_text_msg_type"
+	        	android:layout_width="wrap_content"
+	        	android:layout_height="wrap_content"
+	        	android:layout_marginLeft="12dp"
+	        	android:textColor="@color/text_normal_color"
+	        	android:textSize="@dimen/size_normal"/>
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/usermessage_text_msg_content"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="2"
+	        android:gravity="center_vertical|top"
+	        android:layout_marginLeft="@dimen/user_message_left_margin"
+	        android:ellipsize="end"
+	        android:singleLine="true"
+	        android:textColor="@color/text_hightlight_color"
+	        android:textSize="@dimen/size_max_normal"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	    android:layout_marginRight="@dimen/user_message_right_margin"
+	    android:layout_marginLeft="@dimen/user_message_left_margin"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|right" >
+        <TextView
+            android:id="@+id/usermessage_text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_weight="2"
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/size_min_normal" />
+        
+ 		<TextView
+            android:id="@+id/usermessage_text_click_towatch"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_vertical|top"
+	        android:layout_weight="2"
+	        android:text="点击查看"
+	        android:textColor="@color/text_gray_color_7a"
+	        android:textSize="@dimen/size_normal"/>
+    </LinearLayout>
+    
+</LinearLayout>

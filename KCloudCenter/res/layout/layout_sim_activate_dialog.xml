@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/activate_dialog_margin_left"
+        android:layout_marginRight="@dimen/activate_dialog_margin_left"
+        android:background="@color/layout_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activate_dialog_title_margin_top"
+            android:singleLine="true"
+            android:text="@string/activate_dialog_title"
+            android:textColor="@color/text_green_color"
+            android:textSize="@dimen/size_xxx_max_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activate_dialog_middle_margin_top"
+            android:singleLine="true"
+            android:text="@string/activate_dialog_tip_1"
+            android:textColor="@color/text_hightlight_color"
+            android:textSize="@dimen/size_max_normal" />
+
+        <LinearLayout
+            android:layout_width="@dimen/activate_dialog_text_width"
+            android:layout_height="@dimen/activate_dialog_text_height"
+            android:layout_marginTop="@dimen/activate_dialog_title_margin_top"
+            android:background="@color/activate_bg_color"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/activate_dialog_text"
+                android:textColor="@color/text_hightlight_color"
+                android:textSize="@dimen/size_max_normal" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/layout_right_bg" >
+            </View>
+
+            <TextView
+                android:id="@+id/activate_dialog_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/text_green_color"
+                android:textSize="@dimen/size_max_normal" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activate_dialog_title_margin_top"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/activate_dialog_tip_2"
+            android:textColor="@color/text_gray_color_7a"
+            android:textSize="@dimen/size_mid_normal" />
+
+        <Button
+            android:id="@+id/activate_dialog_btn_ok"
+            android:layout_width="@dimen/activate_dialog_btn_width"
+            android:layout_height="@dimen/activate_dialog_btn_height"
+            android:layout_marginTop="@dimen/activate_dialog_middle_margin_top"
+            android:background="@drawable/selector_message_dialog_btn_bg"
+            android:text="@string/activate_dialog_btn_text"
+            android:textColor="@color/text_hightlight_color"
+            android:textSize="@dimen/size_x_max_normal" />
+
+</LinearLayout>

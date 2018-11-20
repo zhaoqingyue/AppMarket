@@ -1,0 +1,421 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_right_bg" >
+
+    <include
+        android:id="@+id/userinfo_layout_getting_fragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/view_fragment_getting"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/userinfo_layout_success_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/userinfo_layout_right_head_height"
+            android:background="@color/userinfo_layout_right_head_bg"
+            android:paddingLeft="@dimen/userinfo_layout_right_head_paddingLeft"
+            android:paddingRight="@dimen/userinfo_layout_right_head_paddingRight" >
+
+            <ImageView
+                android:id="@+id/userinfo_img_head"
+                android:layout_width="69dp"
+                android:layout_height="69dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:src="@drawable/img_head"
+                android:contentDescription="@string/app_name" />
+            
+            <ImageView
+                android:id="@+id/userinfo_img_head_cover"
+                android:layout_width="69dp"
+                android:layout_height="69dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:src="@drawable/img_head_cover"
+                android:contentDescription="@string/app_name" /> 
+
+            <TextView
+                android:id="@+id/userinfo_text_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@+id/userinfo_img_head"
+                android:background="@null"
+                android:singleLine="true"
+                android:textColor="@color/text_hightlight_color"
+                android:textSize="@dimen/size_x_max_normal" />
+
+            <ImageButton
+                android:id="@+id/userinfo_btn_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/img_message_on" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/userinfo_layout_right_body_margin"
+                android:layout_marginRight="@dimen/userinfo_layout_right_body_margin" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/userinfo_layout_item_height"
+                        android:background="@null"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                        android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="昵称 : "
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <TextView
+                            android:id="@+id/userinfo_text_nick"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/userinfo_layout_left_middle_margin"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_hightlight_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <Button
+                            android:id="@+id/userinfo_btn_nick_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:text="修改"
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <ImageButton
+                            android:id="@+id/userinfo_imgbtn_nick_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                            android:background="@null"
+                            android:src="@drawable/img_edit" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/userinfo_layout_right_separate_width"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/userinfo_layout_split_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/userinfo_layout_item_height"
+                        android:background="@null"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                        android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                        <TextView
+                            android:id="@+id/userinfo_text_hint_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="性别 : "
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <TextView
+                            android:id="@+id/userinfo_text_sex"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/userinfo_layout_left_middle_margin"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_hightlight_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <Button
+                            android:id="@+id/userinfo_btn_sex_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:text="修改"
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <ImageButton
+                            android:id="@+id/userinfo_imgbtn_sex_modify"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                            android:background="@null"
+                            android:src="@drawable/modify_down_unclicked" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/userinfo_layout_right_separate_width"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/userinfo_layout_split_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/userinfo_layout_item_height"
+                        android:background="@null"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                        android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="所在地区 : "
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <TextView
+                            android:id="@+id/userinfo_text_city"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/userinfo_layout_left_middle_margin"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_hightlight_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <Button
+                            android:id="@+id/userinfo_btn_city_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:text="修改"
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <ImageButton
+                            android:id="@+id/userinfo_imgbtn_city_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                            android:background="@null"
+                            android:src="@drawable/img_edit" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/userinfo_layout_right_separate_width"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/userinfo_layout_split_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/userinfo_layout_item_height"
+                        android:background="@null"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                        android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="绑定手机 : "
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <TextView
+                            android:id="@+id/userinfo_text_mobile"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/userinfo_layout_left_middle_margin"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_hightlight_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <Button
+                            android:id="@+id/userinfo_btn_mobile_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:text="修改"
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <ImageButton
+                            android:id="@+id/userinfo_imgbtn_mobile_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                            android:background="@null"
+                            android:src="@drawable/img_edit" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/userinfo_layout_right_separate_width"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/userinfo_layout_split_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/userinfo_layout_item_height"
+                        android:background="@null"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/userinfo_layout_right_text_left_margin"
+                        android:paddingRight="@dimen/userinfo_layout_right_text_right_margin" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:text="帐号密码 : "
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <TextView
+                            android:id="@+id/userinfo_text_password"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/userinfo_layout_left_middle_margin"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/text_hightlight_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <Button
+                            android:id="@+id/userinfo_btn_password_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:text="修改"
+                            android:textColor="@color/text_normal_color"
+                            android:textSize="@dimen/size_x_max_normal" />
+
+                        <ImageButton
+                            android:id="@+id/userinfo_imgbtn_password_modify"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/userinfo_layout_right_btn_image_margin"
+                            android:background="@null"
+                            android:src="@drawable/img_edit" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/userinfo_layout_right_separate_width"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/userinfo_layout_split_bg" />
+
+                    <Button
+                        android:id="@+id/userinfo_btn_loginout"
+                        android:layout_width="@dimen/userinfo_layout_right_btn_loginout_width"
+                        android:layout_height="@dimen/userinfo_layout_right_btn_loginout_height"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/userinfo_layout_right_btn_loginout_bottom_margin"
+                        android:layout_marginTop="@dimen/userinfo_layout_right_btn_loginout_top_margin"
+                        android:background="@drawable/selector_btn_login"
+                        android:gravity="center"
+                        android:text="切换帐号"
+                        android:textColor="@drawable/selector_text_login"
+                        android:textSize="@dimen/size_x_max_normal" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/userinfo_sex_radio_group"
+                    android:layout_width="260dp"
+                    android:layout_height="174dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="179dp"
+                    android:background="@color/userinfo_sex_selector_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <RadioButton
+                        android:id="@+id/userinfo_sex_radio_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_radio_sex"
+                        android:drawablePadding="20dp"
+                        android:text="男  "
+                        android:textColor="@drawable/selector_radio_sex_text"
+                        android:textSize="@dimen/size_x_max_normal" >
+                    </RadioButton>
+
+                    <RadioButton
+                        android:id="@+id/userinfo_sex_radio_women"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_radio_sex"
+                        android:drawablePadding="20dp"
+                        android:text="女  "
+                        android:textColor="@drawable/selector_radio_sex_text"
+                        android:textSize="@dimen/size_x_max_normal" >
+                    </RadioButton>
+                </RadioGroup>
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/userinfo_layout_failed_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/view_fragment_load_failed"
+        android:visibility="gone" />
+
+</FrameLayout>

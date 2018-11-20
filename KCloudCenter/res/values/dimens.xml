@@ -1,0 +1,276 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!--  字体尺寸大小  -->
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_17">17sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_21">21sp</dimen>
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="font_23">23sp</dimen>
+	<dimen name="font_24">24sp</dimen>
+	<dimen name="font_25">25sp</dimen>
+	<dimen name="font_26">26sp</dimen>
+	<dimen name="font_27">27sp</dimen>
+	<dimen name="font_28">28sp</dimen>
+	<dimen name="font_30">30sp</dimen>
+	<dimen name="font_32">32sp</dimen>
+	<dimen name="font_33">33sp</dimen>
+	<dimen name="font_34">34sp</dimen>
+	<dimen name="font_36">36sp</dimen>
+	<dimen name="font_40">40sp</dimen>
+	<dimen name="font_48">48sp</dimen>
+   
+    <!-- 通用控件属性 -->
+    <dimen name="size_min_normal">24dp</dimen>
+    <dimen name="size_mid_normal">26dp</dimen>
+    <dimen name="size_normal">28dp</dimen>
+    <dimen name="size_max_normal">30dp</dimen>
+    <dimen name="size_x_max_normal">32dp</dimen>
+    <dimen name="size_xx_max_normal">36dp</dimen>
+    <dimen name="size_xxx_max_normal">40dp</dimen>
+    <dimen name="size_xxxx_max_normal">48dp</dimen>
+    <dimen name="margin_left">25dp</dimen>
+    <dimen name="margin_top">26dp</dimen>
+    <dimen name="margin_right">5dp</dimen>
+    <dimen name="margin_bottom">5dp</dimen>
+    <dimen name="btn_return_width">40dp</dimen>
+    <dimen name="btn_return_height">40dp</dimen>
+    <dimen name="edit_padding">30dp</dimen>
+    
+    <!-- InputDialog -->
+    <dimen name="inputdialog_title_margin_top">20dp</dimen>
+    <dimen name="inputdialog_content_margin_top">80dp</dimen>
+    <dimen name="inputdialog_edit_btn_margin">13dp</dimen>
+    <dimen name="inputdialog_body_height">137dp</dimen>
+    <dimen name="inputdialog_title_height">55dp</dimen>
+    <dimen name="inputdialog_edit_height">82dp</dimen>
+    <dimen name="inputdialog_edit_width">499dp</dimen>
+    <dimen name="inputdialog_btn_width">218dp</dimen>
+    
+    <!-- MessageDialog -->
+    <dimen name="messagedialog_width">1457dp</dimen>
+    <dimen name="messagedialog_height">89dp</dimen>
+    <dimen name="messagedialog_margin">11dp</dimen>
+    <dimen name="messagedialog_btn_ok_width">158dp</dimen>
+    <dimen name="messagedialog_btn_ok_height">64dp</dimen>
+    <dimen name="messagedialog_text_margin_left">20dp</dimen>
+    <dimen name="messagedialog_text_margin_right">285dp</dimen>
+    
+    <!-- 服务卡激活窗体 -->
+    <dimen name="activate_dialog_margin_left">300dp</dimen>
+    <dimen name="activate_dialog_margin_right">300dp</dimen>
+    <dimen name="activate_dialog_title_margin_top">28dp</dimen>
+    <dimen name="activate_dialog_middle_margin_top">38dp</dimen>
+    <dimen name="activate_dialog_text_width">883dp</dimen>
+    <dimen name="activate_dialog_text_height">85dp</dimen>
+    <dimen name="activate_dialog_btn_width">452dp</dimen>
+    <dimen name="activate_dialog_btn_height">85dp</dimen>
+    
+    <!-- 登录窗体属性 -->
+    <dimen name="login_btn_pass_margin_top">40dp</dimen>
+    <dimen name="login_btn_pass_margin_left">130dp</dimen>
+    <dimen name="login_btn_back_margin_left">50dp</dimen>
+    
+    <dimen name="login_layout_margin_top">50dp</dimen>
+    <dimen name="login_layout_left_width">680dp</dimen>
+    <dimen name="login_layout_left_left_margin">172dp</dimen>
+    <dimen name="login_layout_right_width">660dp</dimen>
+    
+    <dimen name="login_layout_left_title_top_margin">60dp</dimen>
+    <dimen name="login_layout_left_title_bottom_margin">35dp</dimen>
+    <dimen name="login_layout_left_content_width">504dp</dimen>
+    <dimen name="login_layout_left_content_margin">30dp</dimen>
+    <dimen name="login_layout_left_content_inner_margin">10dp</dimen>
+    <dimen name="login_layout_left_bottom_btn_top_margin">20dp</dimen>
+    <dimen name="login_layout_left_margin_left">144dp</dimen>
+	<dimen name="login_layout_left_margin_right">144dp</dimen>
+	<dimen name="login_layout_left_title_height">100dp</dimen>
+    
+    
+	<dimen name="login_layout_left_success_inner_margin">70dp</dimen>
+	<dimen name="login_layout_right_qrcode_margin_center">40dp</dimen>
+    <dimen name="login_layout_right_qrcode_margin_bottom">10dp</dimen>
+    
+	<dimen name="login_btn_mobile_height">71dp</dimen>
+	<dimen name="login_edit_mobile_height">74dp</dimen>
+    <dimen name="login_btn_success_height">74dp</dimen>
+    <dimen name="login_btn_vericode_height">67dp</dimen>
+    <dimen name="login_edit_img_left_right_margin">18dp</dimen>
+	<dimen name="login_separate_height">421dp</dimen>
+	<dimen name="login_qrcode_width">248dp</dimen>
+	<dimen name="login_qrcode_height">248dp</dimen>
+	
+	<dimen name="password_layout_left_title_top_margin">35dp</dimen>
+	<dimen name="password_edit_img_left_right_margin">18dp</dimen>
+	<dimen name="password_hint_to_content_margin">10dp</dimen>
+	<dimen name="password_ok_content_margin">55dp</dimen>
+	
+	<!-- 用户信息 -->
+	<dimen name="userinfo_layout_left_width">440dp</dimen>
+	<dimen name="userinfo_layout_left_height">119dp</dimen>
+	<dimen name="userinfo_layout_left_separate_width">358dp</dimen>
+	<dimen name="userinfo_layout_left_middle_margin">18dp</dimen>
+	<dimen name="userinfo_layout_item_height">90dp</dimen>
+	<dimen name="userinfo_layout_right_width">1040dp</dimen>
+	<dimen name="userinfo_layout_right_head_height">119dp</dimen>
+	<dimen name="userinfo_layout_right_head_paddingLeft">49dp</dimen>
+	<dimen name="userinfo_layout_right_head_paddingRight">72dp</dimen>
+	<dimen name="userinfo_layout_right_body_margin">72dp</dimen>
+	<dimen name="userinfo_layout_right_text_left_margin">8dp</dimen>
+	<dimen name="userinfo_layout_right_text_right_margin">16dp</dimen>
+	<dimen name="userinfo_layout_right_btn_width">200dp</dimen>
+	<dimen name="userinfo_layout_right_btn_margin">69dp</dimen>
+	<dimen name="userinfo_layout_right_top_height">115dp</dimen>
+	<dimen name="userinfo_layout_right_left_margin">64dp</dimen>
+	<dimen name="userinfo_layout_right_head_content_margin">60dp</dimen>
+	<dimen name="userinfo_layout_right_separate_width">933dp</dimen>
+	<dimen name="userinfo_layout_right_btn_loginout_width">495dp</dimen>
+	<dimen name="userinfo_layout_right_btn_loginout_height">101dp</dimen>
+	<dimen name="userinfo_layout_right_btn_loginout_top_margin">23dp</dimen>
+	<dimen name="userinfo_layout_right_btn_loginout_bottom_margin">25dp</dimen>
+	<dimen name="userinfo_layout_right_btn_image_margin">13dp</dimen>
+	
+	<!-- 手机修改 -->
+	<dimen name="mobile_manager_layout_width">551dp</dimen>
+	<dimen name="mobile_manager_title_top_margin">35dp</dimen>
+	<dimen name="mobile_manager_edit_height">82dp</dimen>
+	<dimen name="mobile_manager_edit_vericode_width">250dp</dimen>
+	<dimen name="mobile_manager_success_text_top_margin">156dp</dimen>
+	<dimen name="mobile_manager_success_btn_top_margin">84dp</dimen>
+	
+	<!-- 密码修改 -->
+	<dimen name="pwd_manager_layout_width">551dp</dimen>
+	<dimen name="pwd_manager_text_left_margin">28dp</dimen>
+	<dimen name="pwd_manager_text_right_margin">30dp</dimen>
+	
+	<!-- 区域切换 -->
+	<dimen name="city_manager_layout_width">650dp</dimen>
+	<dimen name="city_manager_wheel_height">236dp</dimen>
+	<dimen name="city_manager_layout_top_margin">8dp</dimen>
+	<dimen name="city_manager_layout_bottom_margin">8dp</dimen>
+	<dimen name="city_manager_head_height">86dp</dimen>
+	<dimen name="city_manager_layout_right_left_margin">37dp</dimen>
+	<dimen name="city_manager_btn_height">83dp</dimen>
+	<dimen name="city_manager_split_height">62dp</dimen>
+	<dimen name="city_manager_split_margin_left">13dp</dimen>
+	
+	<!-- 车型选择 -->
+	<dimen name="car_selector_title_height">55dp</dimen>
+	<dimen name="car_selector_title_margin">72dp</dimen>
+	<dimen name="car_selector_body_height">315dp</dimen>
+	<dimen name="car_selector_body_margin">36dp</dimen>
+	<dimen name="car_selector_body_padding">30dp</dimen>
+	<dimen name="car_selector_btn_height">83dp</dimen>
+	
+	<!-- 车牌号选择 -->
+	<dimen name="carplate_selector_title_height">55dp</dimen>
+	<dimen name="carplate_selector_title_margin">72dp</dimen>
+	<dimen name="carplate_selector_body_height">315dp</dimen>
+	<dimen name="carplate_selector_body_margin">36dp</dimen>
+	<dimen name="carplate_selector_body_padding">60dp</dimen>
+	<dimen name="carplate_selector_edit_height">82dp</dimen>
+	<dimen name="carplate_selector_edit_width">326dp</dimen>
+	<dimen name="carplate_selector_edit_margin">23dp</dimen>
+	<dimen name="carplate_selector_btn_height">83dp</dimen>
+	
+	<!-- 车辆信息 -->
+	<dimen name="carinfo_layout_body_height_top">209dp</dimen>
+	<dimen name="carinfo_layout_body_height_buttom">90dp</dimen>
+	<dimen name="carinfo_middle_left_margin">18dp</dimen>
+	<dimen name="carinfo_layout_margin">72dp</dimen>
+	<dimen name="carinfo_layout_right_top_margin">50dp</dimen>
+	<dimen name="carinfo_layout_right_btn_width">200dp</dimen>
+	<dimen name="carinfo_layout_right_btn_margin">69dp</dimen>
+	
+	<!-- 服务信息 -->
+	<dimen name="service_content_layout_margin">45dp</dimen>
+	<dimen name="service_content_layout_bottom_margin">50dp</dimen>
+	<dimen name="service_content_center_layout_max_width">500dp</dimen>
+	<dimen name="service_content_center_layout_height">154dp</dimen>
+	<dimen name="service_content_center_layout_left_margin">52dp</dimen>
+	<dimen name="service_content_center_layout_item_top_margin">10dp</dimen>
+	<dimen name="service_content_center_layout_item_bottom_margin">10dp</dimen>
+	<dimen name="service_content_center_layout_item_margin">10dp</dimen>
+	<dimen name="service_content_btn_renewal_right_margin">75dp</dimen>
+	<dimen name="service_content_img_icon_width">258dp</dimen>
+	<dimen name="service_content_img_icon_height">258dp</dimen>
+	<dimen name="service_content_btn_renewal_width">183dp</dimen>
+	<dimen name="service_content_btn_renewal_height">83dp</dimen>
+	
+	<dimen name="service_renewal_img_qrcode_left_width">247dp</dimen>
+	<dimen name="service_renewal_img_qrcode_left_height">247dp</dimen>
+	<dimen name="service_renewal_img_qrcode_left_margin">155dp</dimen>
+	<dimen name="service_renewal_img_qrcode_top_margin">118dp</dimen>
+	<dimen name="service_renewal_center_layout_bottom_margin">143dp</dimen>
+	<dimen name="service_renewal_center_layout_left_margin">48dp</dimen>
+	<dimen name="service_renewal_center_layout_item_top_margin">48dp</dimen>
+	
+	<dimen name="service_detail_layout_left_right_margin">40dp</dimen>
+	<dimen name="service_detail_layout_title_left_margin">10dp</dimen>
+	<dimen name="service_detail_layout_title_top_margin">20dp</dimen>
+	<dimen name="service_detail_layout_title_item_margin">122dp</dimen>
+	<dimen name="service_detail_layout_content_item_margin">17dp</dimen>
+	<dimen name="service_detail_layout_content_item_width">486dp</dimen>
+	<dimen name="service_detail_layout_content_item_height">138dp</dimen>
+	
+	<dimen name="service_prompt_text_width">650dp</dimen>
+	<dimen name="service_prompt_text_height">162dp</dimen>
+	<dimen name="service_prompt_text_padding">30dp</dimen>
+	<dimen name="service_prompt_triangle_right_margin">60dp</dimen>
+	
+	<!-- 用户消息 -->
+	<dimen name="user_message_layout_right_top_margin">50dp</dimen>
+	<dimen name="user_message_layout_right_left_margin">45dp</dimen>
+	<dimen name="user_message_layout_right_right_margin">36dp</dimen>
+	<dimen name="user_message_layout_titlebody_height">99dp</dimen>
+	<dimen name="user_message_layout_body_height">116dp</dimen>
+	<dimen name="user_message_layout_up_height">62dp</dimen>
+	<dimen name="user_message_layout_down_height">54dp</dimen>
+	<dimen name="user_message_separate_bottom_margin">8dp</dimen>
+	<dimen name="user_message_left_margin">52dp</dimen>
+	<dimen name="user_message_right_margin">20dp</dimen>
+	
+	<!-- 消息详情 -->
+	<dimen name="message_detail_layout_left_right_margin">55dp</dimen>
+	<dimen name="message_detail_layout_titlebody_height">119dp</dimen>
+	<dimen name="message_detail_separate_bottom_margin">47dp</dimen>
+	<dimen name="message_detail_date_right_margin">33dp</dimen>
+	<dimen name="message_detail_time_right_margin">60dp</dimen>
+	<dimen name="message_detail_datetime_top_margin">39dp</dimen>
+	
+	<!-- 续费 -->
+	<dimen name="content_renewal_layout_right_left_margin">64dp</dimen>
+	<dimen name="content_renewal_layout_right_right_margin">64dp</dimen>
+	<dimen name="content_renewal_layout_right_top_margin">50dp</dimen>
+	<dimen name="content_renewal_layout_titlebody_height">55dp</dimen>
+	<dimen name="content_renewal_body_left_margin">60dp</dimen>
+	<dimen name="content_renewal_separate_top_margin">10dp</dimen>
+	<dimen name="content_renewal_separate_bottom_margin">30dp</dimen>
+	<dimen name="content_renewal_item_top_margin">20dp</dimen>
+	<dimen name="content_renewal_text_right_margin">32dp</dimen>
+	<dimen name="content_renewal_text_left_margin">40dp</dimen>
+	<dimen name="content_renewal_btn_width">660dp</dimen>
+	<dimen name="content_renewal_btn_height">74dp</dimen>
+	<dimen name="content_renewal_btn_top_margin">30dp</dimen>
+	
+	<!-- 流量查询 -->
+	<dimen name="flow_info_progress_left_margin">110dp</dimen>
+	<dimen name="flow_info_progress_top_margin">95dp</dimen>
+	<dimen name="flow_info_layout_left_margin">90dp</dimen>
+	<dimen name="flow_info_layout_top_margin">100dp</dimen>
+	<dimen name="flow_info_layout_text_margin">30dp</dimen>
+	<dimen name="flow_info_edit_left_margin">10dp</dimen>
+	<dimen name="flow_info_line_margin">40dp</dimen>
+	<dimen name="flow_info_time_margin">12dp</dimen>
+	
+	<!-- 退出框 -->
+	<dimen name="prompt_dialog_width">544dp</dimen>
+	<dimen name="prompt_dialog_height">265dp</dimen>
+	
+</resources>

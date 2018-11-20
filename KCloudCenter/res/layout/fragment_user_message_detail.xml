@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_right_bg"
+    android:orientation="vertical" >
+      	
+	<TextView 
+	    android:id="@+id/message_detail_text_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/message_detail_layout_titlebody_height"
+	    android:gravity="center"
+	    android:text="单双号限行通知"
+	    android:textColor="@color/text_normal_color"
+	    android:textSize="@dimen/size_x_max_normal" />
+    
+    <View
+        android:layout_width="match_parent"
+    	android:layout_height="1dp"
+    	android:layout_marginLeft="40dp"
+    	android:layout_marginRight="40dp"
+    	android:layout_marginBottom="@dimen/message_detail_separate_bottom_margin"
+      	android:background="@color/user_message_separate_bg_color" >
+   	</View>
+   	
+    <TextView 
+        android:id="@+id/message_detail_text_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/message_detail_layout_left_right_margin"
+        android:layout_marginRight="@dimen/message_detail_layout_left_right_margin"
+        android:textColor="@color/text_hightlight_color"
+        android:textSize="@dimen/size_max_normal" />
+   
+    <TextView 
+        android:id="@+id/message_detail_text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/message_detail_layout_left_right_margin"
+        android:layout_marginRight="@dimen/message_detail_layout_left_right_margin"
+       	android:layout_marginTop="@dimen/message_detail_datetime_top_margin"
+        android:textColor="@color/text_gray_color_7a"
+        android:textSize="@dimen/size_normal" />
+</LinearLayout>

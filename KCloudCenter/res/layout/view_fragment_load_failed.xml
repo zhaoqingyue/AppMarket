@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/id_fragment_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_failed"
+            android:drawablePadding="30dp"
+            android:gravity="center_vertical"
+            android:text="获取失败，请重试"
+            android:textColor="@color/text_normal_color"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/id_fragment_failed_reload"
+            android:layout_width="550dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/selector_btn_login"
+            android:text="重试"
+            android:textColor="@color/text_hightlight_color"
+            android:textSize="28sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_fragment_abnormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="@color/text_hightlight_color"
+        android:textSize="28sp" />
+
+</RelativeLayout>
